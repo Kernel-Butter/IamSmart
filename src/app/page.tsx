@@ -2,102 +2,140 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div className="flex h-full grow flex-col">
+          <header className="flex items-center justify-between whitespace-nowrap border-b border-background-light/10 dark:border-background-dark/10 bg-background-light dark:bg-background-dark/50 px-4 sm:px-6 lg:px-10 py-3 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
+            <div className="flex items-center gap-3 text-gray-800 dark:text-white">
+              <svg
+                className="h-6 w-6 text-primary"
+                fill="none"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clipPath="url(#clip0_6_535)">
+                  <path
+                    clipRule="evenodd"
+                    d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z"
+                    fill="currentColor"
+                    fillRule="evenodd"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_535">
+                    <rect fill="white" height="48" width="48"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              <h2 className="text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                ResumeCraft
+              </h2>
+            </div>
+            <nav className="hidden md:flex items-center gap-8">
+              <a
+                className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                href="#"
+              >
+                Templates
+              </a>
+              <a
+                className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                href="#"
+              >
+                Examples
+              </a>
+              <a
+                className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                href="#"
+              >
+                Pricing
+              </a>
+            </nav>
+            <div className="flex items-center gap-2">
+              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 px-4 bg-primary/10 text-primary text-sm font-bold leading-normal tracking-wide hover:bg-primary/20 transition-colors">
+                <span className="truncate">Log In</span>
+              </button>
+              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-wide hover:opacity-90 transition-opacity">
+                <span className="truncate">Create My Resume</span>
+              </button>
+            </div>
+          </header>
+          <main className="flex flex-1 flex-col pt-20">
+            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+              <div className="flex flex-col gap-12 lg:gap-16">
+                <div className="@container">
+                  <div
+                    className="relative flex min-h-[500px] flex-col items-center justify-center overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat p-6 text-center shadow-lg"
+                    style={{
+                      backgroundImage:
+                        'linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4VYu_GbZ3oUMa7TvIcBVfkR6GkeNqhX-RY1AKAS99uzT1EpdI_fe-REIYoAaYHEPc7rkfXOkqeIUsqzXrfy1BJaBZfy8MBkwptg2VNqmZ0J4GJTJshOKFzO4aYNF7R_QJUzDzNG6Ws74YdpyUBkYqLUAHYdASpMw7o216SJKBxFstxuBKJ4nAbmrBDSWoaa0ukQREm7J2vGl-tfMl4eUOCXJe3JoETtLNXtBMh73_-Qh29ldFc3Q2zJSL1QcnQY05CwNZTqOTkNg")',
+                    }}
+                  >
+                    <div className="flex max-w-3xl flex-col gap-4">
+                      <h1 className="text-4xl font-black text-white sm:text-5xl md:text-6xl">
+                        Craft a Resume That Gets You Hired
+                      </h1>
+                      <h2 className="text-base font-normal text-white/80 sm:text-lg">
+                        Our intuitive platform helps you create a professional
+                        resume that highlights your skills and experience,
+                        making you stand out to potential employers.
+                      </h2>
+                    </div>
+                    <button className="mt-8 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-wide shadow-lg transition-transform hover:scale-105">
+                      <span className="truncate">Create My Resume</span>
+                    </button>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">
+                    Browse Our Templates
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+                    {[
+                      {
+                        name: "Modern",
+                        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuD0GIey4LtbSzXK3BwS_oi4fVOgSDlDFXznDZMgytd4C39iBnhTXODtrXLTqwK4cPr9Cskf7Ti5nFJKkLAnFwuteBCQgzhzOQzvd3XslKJxZT4cJ43b4cS3he0oP_bNphz74q5iXRV3h4wq_roUppPc5gNUYFlB5jQbwGqWv9rR0fo-FpBBIVPK8hE7b9Zbn2zjjxaOKoJ6q9UQEH0LuoEcAPKtGNPfQmCuFXRJ9K3NTvDZy0pen_I1kTeE7VcQtaiKCpO10LwQ3jI",
+                      },
+                      {
+                        name: "Classic",
+                        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuBkmJJPEiW4V4llfdsPyUaRpeW1byqD-iJ3JKSP_HCKDJsaAR3KC6L42kKFGmhS-5OWN64iML8bpnvPYAYSCgAd4Qu4Ef-FB1F9jfua0MGhIlIzf4GNKFFWPU01KEr9-2uVzEYX1TJWXfObGGtO8lgMru3w0d921zKtE4aV4IhXiW1Zu9w5ncFaU08oZy4PbGAa1GYK4W5qkjsyg8Q1hxo21SCnj80i1Hl7uwCgf0yW3d01R5oaH7OWv1NDvSlXlkXdsoN0Mi1WxYE",
+                      },
+                      {
+                        name: "Creative",
+                        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuDJNVOiMTzFAI4YU-vbzGn1E2h_j5HuY7SwPoGLiHvF4zNKxwqJhemvTEDZMD_BPSCXL9yBcV4B5ZR5OYRcbEtrTHReRbytoARXcnoRglHg4qampB0zL7mPDkQkRksEo3xEmJCOvMrQo7uSpCLHXSAmHBdxKflVrFybAj57N4cXmxxBLYUa7lPo4DdxKykueGkWx89IW3Y0mGU2gLqca23wVbvMTAb2OL4BYZY_lb3ganOWc16B4_tZwT--fEE556RjClgUTsvD1ko",
+                      },
+                      {
+                        name: "Minimalist",
+                        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuBlotObZz6UNDwvbqdEtYhvabYQPLRBbmtaIMPyiGGWNPlu3jzC01j49ZttIXYRMzIz9ypSvmFsj2ItVdG98X4LSLOQwQsUSugBdskLt4xzjxQ-Cme2K43TSBxGjejkEIyhhy9wd4-yTkHuWejEthkmKadIIpJHayfQz54SFUfzeTja8GrRRuxrnFc3gV9xGQpEzCUROAK3mlO7Yy00rI5XaJqfBvZ-9Q2t1z0uv59r87R6uYH323mti4bOKLssKjf0PCWI638gFG0",
+                      },
+                      {
+                        name: "Professional",
+                        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuCs0ngHCj4-DefTLpjLFI8NqLutzKz_V__bvcdWIao70mzu1gDL9PzrWAo4rLDSpPM6RKBuoaZ-zBJ17Xwe5FNG45ica4ySiGkYMJtI15OTRBGSIgFLbWdyWFl73icuGmy1-wz3j7vi1WNPhSE-y8KjIJthHbvELH8A7qKs7w8EKJxph3_Z-dl20HW90w6_TGGMxbtOGs4coHPKT20twF_4kKNLThO3iA5t13eEkRSmY-5luxHwhJ7XUhowbhGwhFvdqmJnVFyzHtw",
+                      },
+                      {
+                        name: "Technical",
+                        url: "https://lh3.googleusercontent.com/aida-public/AB6AXuB6Njw2h_ecgk_gvW-G56W4AqQw6zPaj0-d0Lh8gJxMJkcu16tJJcrHpZEyKfiXK8zgY7gCevet4gNyO-2LbdfH9PY_Y6ABjpE7UTgoRRMwBj9YQH3zxMAKsKAVan0ZwQGrXrnXuOHmP_UwQWckSxqMEzI4kr9bxMbxQiUkMsgQXL8DlizSRE8NbwNMpL-JsaoRPpIdwyki92u3h266OgyK5CCo8AkFzjJRpj_1VwFQe-HqfUEZ77HdkZxUc8oAEBKi_ZTEimjQyDE",
+                      },
+                    ].map((t, i) => (
+                      <div key={i} className="group flex flex-col gap-3">
+                        <div className="relative w-full overflow-hidden rounded-lg shadow-md transition-shadow duration-300 group-hover:shadow-xl">
+                          <div
+                            className="w-full aspect-[3/4] bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105"
+                            style={{ backgroundImage: `url("${t.url}")` }}
+                          ></div>
+                        </div>
+                        <p className="text-base font-medium text-gray-800 dark:text-gray-200">
+                          {t.name}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </>
   );
 }
