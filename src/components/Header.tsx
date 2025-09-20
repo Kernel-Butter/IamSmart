@@ -52,10 +52,10 @@ const Header = () => {
               </a>
             </nav>
             <div className="flex items-center gap-2">
-              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 px-4 bg-primary/10 text-primary text-sm font-bold leading-normal tracking-wide hover:bg-primary/20 transition-colors">
+              <button className="seconadry-btn ">
                 <span className="truncate">Log In</span>
               </button>
-              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-wide hover:opacity-90 transition-opacity">
+              <button className="primary-btn">
                 <span className="truncate">Create My Resume</span>
               </button>
             </div>

@@ -6,7 +6,7 @@ export default function Home() {
       <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
         <div className="flex h-full grow flex-col">
           <main className="flex flex-1 flex-col pt-20">
-            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            <div className="container">
               <div className="flex flex-col gap-12 lg:gap-16">
                 <div className="@container">
                   <div
@@ -26,7 +26,7 @@ export default function Home() {
                         making you stand out to potential employers.
                       </h2>
                     </div>
-                    <button className="mt-8 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-wide shadow-lg transition-transform hover:scale-105">
+                    <button className="mt-8 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6   text-white text-base font-bold leading-normal tracking-wide shadow-lg transition-transform hover:scale-105">
                       <span className="truncate">Create My Resume</span>
                     </button>
                   </div>
