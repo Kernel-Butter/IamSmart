@@ -1,4 +1,4 @@
-import Image from "next/image";
+import styles from "./home.module.css";
 
 export default function Home() {
   return (
@@ -9,14 +9,10 @@ export default function Home() {
             <div className="container">
               <div className="flex flex-col gap-12 lg:gap-16">
                 <div className="@container">
-                  <div
-                    className="relative flex min-h-[500px] flex-col items-center justify-center overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat p-6 text-center shadow-lg"
-                    style={{
-                      backgroundImage:
-                        'linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4VYu_GbZ3oUMa7TvIcBVfkR6GkeNqhX-RY1AKAS99uzT1EpdI_fe-REIYoAaYHEPc7rkfXOkqeIUsqzXrfy1BJaBZfy8MBkwptg2VNqmZ0J4GJTJshOKFzO4aYNF7R_QJUzDzNG6Ws74YdpyUBkYqLUAHYdASpMw7o216SJKBxFstxuBKJ4nAbmrBDSWoaa0ukQREm7J2vGl-tfMl4eUOCXJe3JoETtLNXtBMh73_-Qh29ldFc3Q2zJSL1QcnQY05CwNZTqOTkNg")',
-                    }}
-                  >
-                    <div className="flex max-w-3xl flex-col gap-4">
+                  <div className="relative flex min-h-[500px] flex-col items-center justify-center overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat p-6 text-center shadow-lg">
+                    <div
+                      className={`flex max-w-3xl flex-col gap-4 ${styles.hero}`}
+                    >
                       <h1 className="text-4xl font-black text-white sm:text-5xl md:text-6xl">
                         Craft a Resume That Gets You Hired
                       </h1>
@@ -26,14 +22,36 @@ export default function Home() {
                         making you stand out to potential employers.
                       </h2>
                     </div>
-                    <button className="mt-8 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6   text-white text-base font-bold leading-normal tracking-wide shadow-lg transition-transform hover:scale-105">
-                      <span className="truncate">Create My Resume</span>
-                    </button>
+                  </div>
+                </div>
+
+                <div className="mx-auto">
+                  <div className="w-full max-w-xl flex flex-col gap-6">
+                    <div className="flex flex-col gap-3">
+                      <button
+                        className="h-12 rounded-xl bg-[#f0f2f4] font-semibold text-[#111418] w-full cursor-pointer"
+                        onClick={}
+                      >
+                        Step 1: Upload old resume (PDF/Word)
+                      </button>
+                      <label className="text-sm font-medium text-[#111418]">
+                        Step 2: Paste job description (copy from job listing and
+                        paste below)
+                      </label>
+                      <textarea
+                        placeholder="Paste the job description here..."
+                        className="w-full min-h-[120px] rounded-xl border border-gray-300 p-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#111418]/40"
+                      />
+                      <p className="text-xs text-gray-500">
+                        Adding a job description helps us tailor your resume for
+                        better relevance.
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
                   <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">
-                    Browse Our Templates
+                    Step 3: Choose Template
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
                     {[
